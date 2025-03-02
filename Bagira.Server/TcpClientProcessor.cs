@@ -4,11 +4,11 @@ using Bagira.Shared;
 
 namespace Bagira.Server
 {
-    public class TcpClientProcessor(IClientManager handler, ConnectionsSettings connectionsSettings) : IClientProcessor
+    public class TcpClientProcessor(IClientManager handler, ConnectionSettings connectionSettings) : IClientProcessor
     {
         public async Task AcceptClientsAsync()
         {
-            var ipEndPoint = new IPEndPoint(connectionsSettings.IPAddress, connectionsSettings.Port);
+            var ipEndPoint = new IPEndPoint(connectionSettings.IPAddress, connectionSettings.Port);
             TcpListener listener = new(ipEndPoint);
 
             try

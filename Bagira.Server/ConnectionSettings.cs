@@ -2,7 +2,7 @@
 
 namespace Bagira.Server
 {
-    public class ConnectionsSettings
+    public class ConnectionSettings
     {
         public IPAddress IPAddress { get; set; }
         public int Port { get; set; }

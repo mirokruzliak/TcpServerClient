@@ -3,7 +3,7 @@ using Bagira.Server;
 
 var clientProcessor = new TcpClientProcessor(
     new CustomClientManager(new LetterCounter()), 
-    new ConnectionsSettings
+    new ConnectionSettings
     {
         IPAddress = IPAddress.Any,
         Port = 1000
